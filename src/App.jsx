@@ -25,7 +25,7 @@ const queryClient = new QueryClient({
 
 const router = createBrowserRouter([
   {
-    path:'/',
+    path:'/mixMaster',
     element: <HomeLayout />,
     errorElement: <Error />,
     children: [
