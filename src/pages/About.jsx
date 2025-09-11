@@ -15,5 +15,4 @@ const About = () => {
     </Wrapper>
   );
 };
-
 export default About;

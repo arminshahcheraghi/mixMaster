@@ -1,6 +1,7 @@
-import { Form, useNavigation } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/SearchForm';
-const SearchForm = ({searchTerm}) => {
+import { Form, useNavigation } from 'react-router-dom';
+
+const SearchForm = ({ searchTerm }) => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
   return (
@@ -19,5 +20,4 @@ const SearchForm = ({searchTerm}) => {
     </Wrapper>
   );
 };
-
 export default SearchForm;
