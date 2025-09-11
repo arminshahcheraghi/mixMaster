@@ -12,6 +12,7 @@ const singleCocktailQuery = (id) => {
     queryKey:['cocktail', id],
     queryFn: async () => {
     const {data} = await axios.get(`${singleCocktailUrl}${id}`);
+    console.log(data);
     return data;
     }
   }
@@ -21,7 +22,8 @@ export const loader = (queryClient) =>
    async ({params}) => {
     const {id} = params;
     await queryClient.ensureQueryData(singleCocktailQuery(id));
-    return {id, data};
+    
+    return {id};
 }
 
 const Cocktail = () => {
